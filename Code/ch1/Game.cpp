@@ -30,9 +30,3 @@ void Game::render() {
   mWindow.draw(mPlayer);
   mWindow.close();
 }
-
-int main() {
-  Game game;
-  game.run();
-  return 0;
-}

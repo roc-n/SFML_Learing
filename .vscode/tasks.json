@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "Compile",
-            "command": "mingw32-make",
+            "command": "cd  -and mingw32-make",
             "args": [],
             "options": {
                 "cwd": "D:\\Env\\mingw64\\bin"

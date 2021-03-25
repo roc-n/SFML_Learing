@@ -1,3 +1,5 @@
+#ifndef _GAME_H_
+#define _GAME_H_
 #include <SFML/Graphics.hpp>
 
 class Game {
@@ -14,3 +16,4 @@ private:
   sf::RenderWindow mWindow;
   sf::CircleShape mPlayer;
 };
+#endif
