@@ -18,5 +18,5 @@
         "c": "cd $dir && gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=GBK && &'$dir$fileNameWithoutExt'",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -std=c++14 -static-libgcc -fexec-charset=GBK -lsfml-graphics-d-2 -lsfml-system-d-2 -lsfml-window-d-2 && &$dir$fileNameWithoutExt"
     },
-    "C_Cpp.clang_format_sortIncludes": true // 格式化时调整include的顺序（按字母排序）
+    "C_Cpp.clang_format_sortIncludes": true, // 格式化时调整include的顺序（按字母排序）
 }
