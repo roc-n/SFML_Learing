@@ -28,5 +28,5 @@ void Game::update() {}
 void Game::render() {
   mWindow.clear();
   mWindow.draw(mPlayer);
-  mWindow.close();
+  mWindow.display();
 }

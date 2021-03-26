@@ -4,27 +4,40 @@
         {
             "type": "shell",
             "label": "Compile",
-            "command": "clang++",
+            "command": "cd  ${fileDirname} ; mingw32-make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Single_Compile",
+            "command": "g++",
             "args": [
                 "${file}",
-                // "${fileDirname}/lib/Class_adjList_map.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe",
-                "-Wall", // 开启额外警告
+                "-Wall",
                 "-O2",
-                //"-L./Map/lib",
-                //"-lClass_adjList_map",
-                "--target=x86_64-w64-mingw",
-                "-static-libgcc", // 静态链接libgcc，一般都会加上
+                "-static-libgcc",
                 "-std=c++17",
-                "-lsfml-graphics-d-2",
-                "-lsfml-system-d-2",
-                "-lsfml-window-d-2",
+                "-lsfml-graphics",
+                "-lsfml-system",
+                "-lsfml-window",
                 "-g"
             ],
-            // "options": {
-            //     "cwd": "D:\\Env\\mingw64\\bin"
-            // }
+            "options": {
+                "cwd": "D:\\Env\\mingw64\\bin"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
