@@ -15,8 +15,11 @@ private:
 
 private:
   static const float playSpeed;
+  static const sf::Time TimePerFrame;
+
   sf::RenderWindow mWindow;
-  sf::CircleShape mPlayer;
+  sf::Sprite mPlayer;
+  sf::Texture mTexture;
   bool mIsMovingUp, mIsMovingDown, mIsMovingLeft, mIsMovingRight;
 };
 #endif
