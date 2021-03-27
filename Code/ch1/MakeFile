@@ -1,13 +1,7 @@
-SRCS = Game.cpp main.cpp
-TARG = main
-CC= g++
-OPTS = -Wall -O2 -g
-LIBS = -lsfml-graphics-d-2 -lsfml-system-d-2 -lsfml-window-d-2
+main : main.o Game.o
+	g++ -o  main main.o Game.o -lsfml-graphics -lsfml-system -lsfml-window
 
-OBJS = $(SRCS:.cpp=.o)
-all: $(TARG)
-$(TARG):  $(OBJS)
-	$(CC) -o $(TARG) $(OBJS) $(LIBS)
-
-clean:
-	rm -f $(OBJS) $(TARG)
+main.o : main.cpp 
+	g++ -c -g main.cpp
+Game.o : Game.cpp Game.hpp
+	g++ -c -g Game.cpp
