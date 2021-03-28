@@ -19,6 +19,7 @@ private:
 
   sf::RenderWindow mWindow;
   sf::Sprite mPlayer;
+  // sf::Font mFont;
   sf::Texture mTexture;
   bool mIsMovingUp, mIsMovingDown, mIsMovingLeft, mIsMovingRight;
 };

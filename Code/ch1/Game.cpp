@@ -1,7 +1,7 @@
 #include "Game.hpp"
 #include <iostream>
 const float Game::playSpeed = 150.f;
-const sf::Time Game::TimePerFrame = sf::seconds(1.f / 48.f);
+const sf::Time Game::TimePerFrame = sf::seconds(1.f / 60.f);
 
 Game::Game()
     : mWindow(sf::VideoMode(1280, 640), "SFML Application"), mPlayer(),
