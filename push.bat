@@ -1,1 +1,3 @@
-git add . ; git commit -m "script" ; git push
+git add . 
+git commit -m "script" 
+git push
