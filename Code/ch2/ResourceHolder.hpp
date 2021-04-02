@@ -1,3 +1,5 @@
+#ifndef _RESOURCEHOLDER_HPP_
+#define _RESOURCEHOLDER_HPP_
 #include <SFML/Graphics.hpp>
 #include <cassert>
 #include <map>
@@ -6,12 +8,16 @@
 namespace Textures {
 enum class ID { Landscape, Airplane, Missle };
 }
-class TextureHolder {
+
+template <typename Resource, typename Identifier> class ResourceHolder {
 private:
-  std::map<Textures::ID, std::unique_ptr<sf::Texture>> mTextureMap;
+  std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
 
 public:
-  void load(Textures::ID id, const std::string &filename);
-  sf::Texture &get(Textures::ID id);
-  const sf::Texture &get(Textures::ID id) const;
+  void load(Identifier id, const std::string &filename);
+  Resource &get(Textures::ID id);
+  const Resource &get(Textures::ID id) const;
 };
+
+#include "ResourceHolder.inl"
+#endif
