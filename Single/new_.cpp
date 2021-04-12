@@ -14,6 +14,5 @@ int main() {
         window.close();
     }
   }
-
   return 0;
 }
