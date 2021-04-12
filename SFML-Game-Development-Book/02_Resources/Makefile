@@ -5,4 +5,5 @@ SRC = $(wildcard *.cpp) $(wildcard ./Source/*.cpp)
 OBJ := $(wildcard ./obj)
 
 main : $(objects)
+
 	g++ -o main $(objects) -lsfml-graphics -lsfml-system -lsfml-window

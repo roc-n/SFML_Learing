@@ -7,11 +7,9 @@
 #include <Book/SceneNode.hpp>
 #include <Book/SpriteNode.hpp>
 
-
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/System/NonCopyable.hpp>
-
 
 #include <array>
 

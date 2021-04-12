@@ -9,6 +9,9 @@
 // }
 
 int main() {
+  int x = 20;
+  int &&we = x * 99;
+
   std::string str = "Hello";
   std::vector<std::string> v;
   //调用常规的拷贝构造函数，新建字符数组，拷贝数据
