@@ -9,10 +9,13 @@ SRC_PATH := ./Source
 TARGET := main.exe
 
 OBJS_DIR := Objs
+# Target_DIR := bin
 
 SRCS += $(wildcard $(SRC_PATH)/*cpp)
 
-OBJS := $(notdir $(SRCS:%.cpp=$(OBJS_DIR)/%.o))
+SRCS_NO_DIR += $(notdir $(wildcard $(SRC_PATH)/*cpp))
+
+OBJS := $(SRCS_NO_DIR:%.cpp=$(OBJS_DIR)/%.o)
 
 
 LIBS := .
@@ -30,9 +33,13 @@ CFLGS += $(foreach dir,(INCLUDE_PATH), -I(dir))
 # LDFLAGS += $(foreach lib,(LIBS),-l(lib))
 
 all:	clean build
- 
 build:
+	@mkdir -p $(OBJS_DIR)
+	# @mkdir -p ./bin
 	$(CPP) -c $(CFLAGS) $(SRCS)
+	@mv ./*.o $(OBJS_DIR)
 	$(CPP) $(CFLAGS) -o $(TARGET) $(OBJS) -lsfml-graphics-d-2 -lsfml-system-d-2 -lsfml-window-d-2
+	# @mv ./*.exe ./bin
+
 clean:
 	$(RM) $(OBJS) $(TARGET)
