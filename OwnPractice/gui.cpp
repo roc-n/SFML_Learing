@@ -12,12 +12,11 @@ int main(void) {
   }
   sf::Text text("TYK", font, 40);
   sf::Sprite sprite(texture);
-  text.setOrigin(text.getLocalBounds().width,
-                 text.getLocalBounds().height + 200.f);
+  text.setOrigin(640.f, 320.f);
   sf::Vector2f jojo(window.getSize().x / 2.f, window.getSize().y / 2.f);
   std::cout << text.getOrigin().x << " " << text.getOrigin().y << std::endl;
 
-  text.setPosition(jojo);
+  text.setPosition(0, 0);
   std::cout << text.getPosition().x << " " << text.getPosition().y << std::endl;
   std::cout << text.getOrigin().x << " " << text.getOrigin().y << std::endl;
   text.setFillColor(sf::Color::Blue);
@@ -29,11 +28,11 @@ int main(void) {
         window.close();
       }
     }
-    // text.rotate(1.f);
-    // if (text.getRotation() > 360) {
-    //   text.setRotation(0);
-    // }
-
+    if (text.getPosition().x == window.getSize().x / 2.f &&
+        text.getPosition().y == window.getSize().y / 2.f) {
+    } else {
+      text.move(1.f, 0.5f);
+    }
     window.clear();
     window.draw(text);
     // window.draw(sprite);
