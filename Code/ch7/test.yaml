@@ -3,4 +3,8 @@ yugi: age:20
 jojo: age:30
   address:england
 
-categary: solar
+category: solar
+
+planet:
+  - [1, 2, 3, 4, 5]
+  - planet: home
