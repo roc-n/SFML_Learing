@@ -1,10 +1,32 @@
-yugi: age:20
-  address:beijing
-jojo: age:30
-  address:england
-
-category: solar
-
-planet:
-  - [1, 2, 3, 4, 5]
-  - planet: home
+AircraftData:
+  Eagle:
+    hitpoints: 100
+    speed: 200
+    fireInterval: 1
+  Raptor:
+    hitpoints: 20
+    speed: 80
+    directions: [[45, 80], [-45, 160], [45, 80]]
+    fireInterval: 0
+  Avenger:
+    hitpoints: 40
+    speed: 50
+    directions: [[45, 50], [0, 50], [-45, 100], [0, 50], [45, 50]]
+    fireInterval: 2
+ProjectileData:
+  AlliedBullet:
+    damage: 10
+    speed: 300
+  EnemyBullet:
+    damage: 10
+    speed: 300
+  Missile:
+    damage: 200
+    speed: 150
+PickupData:
+  HealthRefill:
+    repair: 25
+  MissileRefill:
+    collectMissiles: 3
+  FireSpread:
+  FireRate:

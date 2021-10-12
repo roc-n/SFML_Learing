@@ -20,18 +20,20 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "${fileDirname}/${fileBasenameNoExtension}.out",
                 "-Wall",
                 "-O2",
                 "-static-libgcc",
                 "-std=c++17",
-                "-lsfml-graphics",
-                "-lsfml-system",
-                "-lsfml-window",
+                // "-lsfml-graphics",
+                // "-lsfml-system",
+                // "-lsfml-window",
+                "-lyaml-cpp",
                 "-g"
             ],
             "options": {
-                "cwd": "D:\\Env\\mingw64\\bin"
+                // "cwd": "D:\\Env\\mingw64\\bin"
+                "cwd": "/usr/bin"
             },
             "problemMatcher": [],
             "group": {

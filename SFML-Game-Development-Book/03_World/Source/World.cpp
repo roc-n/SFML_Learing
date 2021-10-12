@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
+#include <iostream>
+
 World::World(sf::RenderWindow &window)
     : mWindow(window), mWorldView(window.getDefaultView()), mTextures(),
       mSceneGraph(), mSceneLayers(),
@@ -68,6 +70,7 @@ void World::buildScene() {
   // Add player's aircraft
   std::unique_ptr<Aircraft> leader(new Aircraft(Aircraft::Eagle, mTextures));
   mPlayerAircraft = leader.get();
+
   mPlayerAircraft->setPosition(mSpawnPosition);
   mPlayerAircraft->setVelocity(40.f, mScrollSpeed);
   mSceneLayers[Air]->attachChild(std::move(leader));
@@ -80,6 +83,7 @@ void World::buildScene() {
 
   std::unique_ptr<Aircraft> rightEscort(
       new Aircraft(Aircraft::Raptor, mTextures));
+
   rightEscort->setPosition(80.f, 50.f);
   mPlayerAircraft->attachChild(std::move(rightEscort));
 }

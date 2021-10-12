@@ -11,6 +11,7 @@ TextNode::TextNode(const FontHolder &fonts, const std::string &text) {
 
 void TextNode::drawCurrent(sf::RenderTarget &target,
                            sf::RenderStates states) const {
+
   target.draw(mText, states);
 }
 

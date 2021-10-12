@@ -38,7 +38,7 @@ build:
 	# @mkdir -p ./bin
 	$(CPP) -c $(CFLAGS) $(SRCS)
 	@mv ./*.o $(OBJS_DIR)
-	$(CPP) $(CFLAGS) -o $(TARGET) $(OBJS) -lsfml-graphics-d-2 -lsfml-system-d-2 -lsfml-window-d-2
+	$(CPP) $(CFLAGS) -o $(TARGET) $(OBJS) -lsfml-graphics -lsfml-system -lsfml-window
 	# @mv ./*.exe ./bin
 
 clean:

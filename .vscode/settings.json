@@ -16,7 +16,8 @@
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc '$fileName' -o '$fileNameWithoutExt.out' -Wall -g -O2 -static-libgcc -std=c11 -fexec-charset=GBK && &'$dir$fileNameWithoutExt.out'",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.out -Wall -g -O2 -std=c++14 -static-libgcc -fexec-charset=GBK -lyaml-cpp && $dir$fileNameWithoutExt.out"
+        // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.out -Wall -g -O2 -std=c++14 -static-libgcc -fexec-charset=GBK -lyaml-cpp && $dir$fileNameWithoutExt.out"
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.out -Wall -g -O2 -std=c++14 -static-libgcc -fexec-charset=GBK -lsfml-system -lsfml-graphics -lsfml-window && $dir$fileNameWithoutExt.out"
     },
     "C_Cpp.clang_format_sortIncludes": true // 格式化时调整include的顺序（按字母排序）
 }
